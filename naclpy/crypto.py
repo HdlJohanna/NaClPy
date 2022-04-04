@@ -14,3 +14,7 @@ def make_key() -> bytes:
         """
     
     return Fernet.generate_key()
+
+
+def load_key(filename:str) -> bytes:
+    return open(filename,"rb").read()
