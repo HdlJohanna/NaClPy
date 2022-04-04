@@ -8,14 +8,14 @@ class Server(object):
         self.secret_key = secret_key
         self.host = host
         self.port = port
-        self.app = Flask(__name__)
+        self.web = Flask(__name__)
         self.hash_key = make_key() if not hash_key else hash_key
 
-        @self.app.route("/")
+        @self.web.route("/")
         def main():
             return redirect("/test")
             
-        @self.app.route("/test")
+        @self.web.route("/test")
         def test():
             return json.dumps({
                 "Response-Code":200,
