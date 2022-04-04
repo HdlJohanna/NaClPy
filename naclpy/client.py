@@ -14,8 +14,8 @@ class Client:
         self.port = port
         self.hash_key = make_key() if not hash_key else hash_key
 
-    def request(self,endpoint:str="test",method:str=METHOD.GET):
+    def request(self,endpoint:str="test",*,method:str=METHOD.GET,**context):
         resource = requests.request(method,f'http://{self.host}:{self.port}/{endpoint}',headers={
             "SECRET_KEY":encrypt(self.secret_key,self.hash_key)
-        })
+        },json=context)
         return resource
