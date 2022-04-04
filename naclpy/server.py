@@ -1,6 +1,6 @@
 import json
 from flask import Flask, request, redirect, url_for
-from crypto import make_key, decrypt
+from .crypto import make_key, decrypt
 
 
 class Server(object):
