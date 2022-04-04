@@ -31,4 +31,4 @@ class Server(object):
         return False # Key doesn't match - 403 forbidden
 
     def start(self):        
-        self.app.run(self.host,self.port)
+        self.web.run(self.host,self.port)
