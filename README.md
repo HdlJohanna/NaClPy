@@ -20,7 +20,6 @@ py -3 -m pip install -U git+https://github.com/HdlJohanna/naclpy
 ## Links 
 
 - [Documentation](https://github.com/HdlJohanna/naclpy/wiki)
-- [Usage Examples](https://github.com/HdlJohanna/naclpy/wiki#Samples)
 
 ## License
 
